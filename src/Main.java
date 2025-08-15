@@ -1,52 +1,89 @@
 public class Main {
     public static void main(String[] args) {
-        //1 - объявление и вывод переменных
-        var dog = 8.0;
-        var cat = 3.6;
-        var papper = 763789;
-        System.out.println("1st task" + "\ndog: " + dog + "\ncat: " + cat + "\npapper: " + papper);
-        //2 - увеличение значения каждой переменной на 4
-        dog = (dog+4); cat = (cat+4); papper = (papper+4);
-        System.out.println("2nd task"  + "\ndog: " + dog + "\ncat: " + cat + "\npapper: " + papper);
-        //3 - reducing value of each variable by a certain amount//
-        dog = ((dog) - 3.5); cat = ((cat) - 1.6); papper = ((papper) - 7639);
-        System.out.println("3rd task"  + "\ndog: " + dog + "\ncat: " + cat + "\npapper: " + papper);
-        //4- объявление новой переменной, её вывод, вывод результатов арифметических действий
-        var friend = 19;
-        System.out.println("4th task" + "\nfriend: " + friend);
-        friend = (friend + 2);
-        System.out.println("friend: " + friend);
-        friend = (friend / 7);
-        System.out.println("friend: " + friend);
-        //5 - объявление новой переменной, её вывод, вывод результатов арифметических действий
-        var frog = 3.5;
-        System.out.println("5th task" + "\nfrog: " + frog);
-        frog = (frog * 10);
-        System.out.println("frog: " + frog);
-        frog = (frog / 3.5);
-        System.out.println("frog: " + frog);
-        frog = (frog + 4);
-        System.out.println("frog: " + frog);
-        //6 - Подсчёт и вывод общей массы бойцов, подсчёт и вывод разницы массы бойцов
-        var boxer1 = 78.2;
-        var boxer2 = 82.7;
-        System.out.println("6th task" + "\ntotal mass of fighters = " + (boxer1+boxer2));
-        var diff = Math.abs(boxer1 - boxer2);
-        System.out.println("the difference between two fighters is "+ (diff));
-        //7 - вывод остатка от деления
-        var reminder = (boxer2 % boxer1);
-        System.out.println("6th task" + "\nReminder of division is " + reminder);
-        //8.1 - подсчёт числа сотрудников компании при 640 часах работы
-        var totalHours = 640;
-        var hoursPerEmployee = 8;
-        var numberOfEmployees = (totalHours / hoursPerEmployee);
-        System.out.println("Всего работников в компании — " + numberOfEmployees + " человек");
-        //8.2 - подсчёт возможного общего количества рабочих часов при увеличении числа сотрудников, работающих по 8 часов
-        var additionalEmployees = 94;
-        var updatedNumberOfEmployees = numberOfEmployees + additionalEmployees;
-        var updatedTotalHours = updatedNumberOfEmployees * hoursPerEmployee;
-        System.out.println("Если в компании работает " + updatedNumberOfEmployees +
-                " человек, то всего " + updatedTotalHours +
-                " часов работы может быть поделено между сотрудниками");
+        //1st task
+        int i = 0;
+        byte b = 0;
+        short s = 0;
+        long l = 0;
+        float f = 0;
+        double d = 0;
+        System.out.printf("\nЗначение переменной i с типом int равно " + i +
+                "\nЗначение переменной b с типом byte равно " + b +
+                "\nЗначение переменной s с типом short равно " + s +
+                "\nЗначение переменной l с типом long равно " + l +
+                "\nЗначение переменной f с типом float равно " + f +
+                "\nЗначение переменной d с типом double равно " + d );
+        //2nd task
+        i = 569;
+        b = 67;
+        s = -159;
+        l = 987678965549L;
+        f = 2.786f;
+        d = 27.12;
+        System.out.printf("\nЗначение переменной i с типом int равно " + i +
+                "\nЗначение переменной b с типом byte равно " + b +
+                "\nЗначение переменной s с типом short равно " + s +
+                "\nЗначение переменной l с типом long равно " + l +
+                "\nЗначение переменной f с типом float равно " + f +
+                "\nЗначение переменной d с типом double равно " + d );
+        //3rd task
+        var pupilsLP = 23;
+        var pupilsAS = 27;
+        var pupilsEA = 30;
+        var paperListTotal = 480;
+        var paperListPerPupil = paperListTotal / (pupilsLP + pupilsAS + pupilsEA);
+        System.out.println("\nНа каждого ученика рассчитано " + paperListPerPupil + " листов бумаги ");
+        //4th task
+        var perTwoMinutesProductivity = 16;
+        var perTwentyMinutesProductivity = perTwoMinutesProductivity * 10;
+        var perDayProductivity = perTwentyMinutesProductivity * 72;
+        var perThreeDaysProductivity = perDayProductivity * 3;
+        var perMonthProductivity = (perThreeDaysProductivity * 10) + perDayProductivity;//при условии если речь идёт
+        // про месяц в котором 31 день ( Январь, март, май, июль, август, октябрь и декабрь)
+        System.out.println("За 2 минуты машина произвела " + perTwoMinutesProductivity + " штук бутылок»");
+        System.out.println("За 20 минут машина произвела " + perTwentyMinutesProductivity + " штук бутылок»");
+        System.out.println("За день машина произвела " + perDayProductivity + " штук бутылок»");
+        System.out.println("За 3 дня машина произвела " + perThreeDaysProductivity + " штук бутылок»");
+        System.out.println("За месяц машина произвела " + perMonthProductivity + " штук бутылок»");
+        //5th task
+        var whitePaintCanPerClass = 2;
+        var brownPaintCanPerClass = 4;
+        var amountOfClasses = 40;
+        var whitePaintCanPerClassTotal = whitePaintCanPerClass * amountOfClasses;
+        var brownPaintCanPerClassTotal = brownPaintCanPerClass * amountOfClasses;
+        System.out.println("В школе, где " + amountOfClasses + " классов, нужно " + whitePaintCanPerClassTotal + " банок белой краски и " + brownPaintCanPerClassTotal + " банок коричневой краски");
+        //6th task
+        var bananaNetWeightPerBreakfastGr = 5 * 80; //5бананов по 80 гр каждый
+        var milkNetWeightPerBreakfastGr = 2 * 105; //200 мл молока (100 мл = 105 грамм)
+        var iceCreamNetWeightPerBreakfastGr = 2 * 100; //2 брикета по 100 грамм
+        var eggsNetWeightPerBreakfastGr = 4 * 70; //4 яйца (1 яйцо — 70 грамм)
+        var netWeightPerBreakfastGr = bananaNetWeightPerBreakfastGr + milkNetWeightPerBreakfastGr + iceCreamNetWeightPerBreakfastGr + eggsNetWeightPerBreakfastGr;
+        var netWeightPerBreakfastKg = netWeightPerBreakfastGr / 1000;
+        var reminder = netWeightPerBreakfastKg % netWeightPerBreakfastGr;
+        System.out.println("Масса нетто 1 порции завтрака составляет " + netWeightPerBreakfastGr + "грамм (" + netWeightPerBreakfastKg +"," + reminder + "кг)");
+        //7th task
+        var targetTotalWeightLossKg = 7;
+        var easyWeightLossPerDayGr = 250;
+        var hardWeightLossPerDayGr = 500;
+        var weightLossPeriodEasy = targetTotalWeightLossKg * 1000 / easyWeightLossPerDayGr;
+        var weightLossPeriodHard = targetTotalWeightLossKg * 1000 / hardWeightLossPerDayGr;
+        var avarageWeightLossPeriod = (weightLossPeriodEasy + weightLossPeriodHard) / 2;
+        System.out.println("\n" + weightLossPeriodEasy + " дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм." +
+                "\n" + weightLossPeriodHard + " дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм." +
+                "\nВ среднем чтобы добиться результата похудения потребуется " + avarageWeightLossPeriod + "день");
+        //8th task
+        var mashaPerMonthCurrent = 67760;
+        var denisPerMonthCurrent = 83690;
+        var kristinaPerMonthCurrent = 76230;
+        var mashaPerMonthUpdated = mashaPerMonthCurrent * 1.1;
+        var denisPerMonthUpdated = denisPerMonthCurrent * 1.1;
+        var kristinaPerMonthUpdated = kristinaPerMonthCurrent * 1.1;
+        var mashaYearDiff =  (mashaPerMonthUpdated - mashaPerMonthCurrent) * 12;
+        var denisYearDiff =  (denisPerMonthUpdated - denisPerMonthCurrent) * 12;
+        var kristinaYearDiff = (kristinaPerMonthUpdated - kristinaPerMonthCurrent) * 12;
+        //в выводе стоит выполнить приведение к типу иначе в выводе будут некоректно отображаться полученные значения
+        System.out.println("Маша теперь получает " + (int)mashaPerMonthUpdated + " рублей. Годовой доход вырос на " + (int)mashaYearDiff + " рублей");
+        System.out.println("Денис теперь получает " + (int)denisPerMonthUpdated + " рублей. Годовой доход вырос на " + (int)(denisYearDiff) + " рублей");
+        System.out.println("Кристина теперь получает " + (int)kristinaPerMonthUpdated + " рублей. Годовой доход вырос на " + (int)(kristinaYearDiff) + " рублей");
     }
 }
